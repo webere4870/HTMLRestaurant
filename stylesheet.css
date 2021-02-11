@@ -1,0 +1,559 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/images/pancakeBackgroundTwo.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.frontPage
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.frontPageContact
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.contactInfo
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+h1
+{
+    color: white;
+    text-shadow: 5px 5px 5px black;
+font-size: 75px;
+}
+
+h2
+{
+    color: white;
+}
+
+.pancakeTitle
+{
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.navigationBar img
+{
+    width: 100px;
+    height: auto;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.navigationBar a
+{
+    padding: 0 30px;
+}
+
+.navigationBar{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h1, h2, h3,p, div a
+{
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+span
+{
+    font-family: 'Lexend Giga', sans-serif;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 40px;
+}
+
+.italic
+{
+    margin-bottom: 20px ;
+}
+
+
+.firstButton
+{
+    padding: 8px 30px;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45));
+    border: 2px solid rgb(163, 108, 36);
+    color: white;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+.secondButton
+{
+    padding: 8px 30px;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45));
+    border: 2px solid rgb(163, 108, 36);
+    color: white;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+.firstButton:hover{
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));   
+}
+
+.navigationBar a:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(163, 108, 36);
+    text-decoration-thickness: 3px;
+}
+
+.outOfFlex
+{
+    position: absolute;
+    bottom: 20px;
+    left: calc((100% - 40px) /2);
+}
+
+.fa-chevron-circle-down
+{
+    font-size: 40px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.fa-chevron-circle-down:hover{
+    color: rgba(163, 108, 36, 1);
+}
+
+
+.meetTheTeam
+{
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.secondPageFront
+{
+    min-height: 100vh;
+}
+
+.teamGrid
+{
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: auto;
+    text-align: center;
+}
+
+.personCard
+{
+    width: 300px;
+    height: 400px;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.one{
+    background: linear-gradient(rgba(177,123,79,0.8), rgba(177, 123, 79, 0.8)), url("/images/man1.jpeg");
+}
+
+.two{
+    background: linear-gradient(rgba(177,123,79,0.8), rgba(177, 123, 79, 0.8)), url("/images/woman1.jpeg");
+}
+
+.three{
+    background: linear-gradient(rgba(177,123,79,0.8), rgba(177, 123, 79, 0.8)), url("/images/man2.jpeg");
+}
+
+.four{
+    background: linear-gradient(rgba(177,123,79,0.8), rgba(177, 123, 79, 0.8)), url("/images/woman2.jpeg");
+}
+
+.five{
+    background: linear-gradient(rgba(177,123,79,0.8), rgba(177, 123, 79, 0.8)), url("/images/man3.jpeg");
+}
+
+.six{
+    background: linear-gradient(rgba(177,123,79,0.8), rgba(177, 123, 79, 0.8)), url("/images/woman3.jpeg");
+}
+
+.personRotated
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -100;
+    background: white;
+    position: absolute;
+    top: -15px;
+    left: 13px;
+    border-radius: 10px;
+}
+
+
+
+.personCard h1, .personCard h2{
+    margin: 0 7px;
+}
+
+.personCard h2{
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 15px;
+}
+
+.personCard i{
+    font-size: 45px;
+    margin: 10px 5px;
+}
+
+.personHidden
+{
+    display: none;
+}
+
+.fa-facebook-square:hover
+{
+    color: blue;
+}
+
+.fa-twitter-square:hover
+{
+    color: cyan;
+}
+
+.fa-instagram-square:hover
+{
+    color: rgb(223, 3, 223);
+}
+
+.fa-youtube-square:hover
+{
+    color: red;
+}
+
+.personCard:hover > .personHidden{
+    display: initial;
+}
+
+.teamGrid h1
+{
+    font-family: 'Lexend Giga', sans-serif;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 40px;
+}
+
+.heading
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.heading i{
+    color: rgb(163, 108, 36);
+    font-size: 35px;
+    text-shadow: 5px 5px 5px black;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background: rgba(0, 0, 0, .7);
+    min-height: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer img
+{
+    width: 75px;
+    height: auto;
+}
+
+.footer i{
+    font-size: 40px;
+}
+
+.footer p{
+    color: white;
+}
+
+.menuBar
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.menuBar div:hover{
+    background: black;
+}
+
+.menuBar a{
+    margin: 10px;
+}
+
+.menuBar > a > div
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 175px;
+    width: 175px;
+    margin: 0 60px;
+    border: 3px solid rgba(163, 108, 36, 1);
+    background: rgba(0, 0, 0, .5);
+}
+
+.menuBar > a > div i{
+    font-size: 35px;
+}
+
+.menuTitle
+{
+    margin: 20px 0;
+}
+
+.secondPageMenu
+{
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.secondPageMenu h2
+{
+    font-size: 40px;
+}
+
+.secondPageMenu h3
+{
+    font-family: 'Lexend Giga', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.secondPageMenu p
+{
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 13px;
+}
+
+.itemType
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.itemBox
+{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.itemBox > *
+{
+    margin-top: 12px;
+}
+
+.pictureDiv
+{
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.item1
+{
+    background: url("/images/menuOne.jpeg");
+}
+
+.item2
+{
+    background: url("/images/pancakeThree.jpeg");
+}
+
+.item3
+{
+    background: url("/images/menuThree.jpeg");
+}
+
+.item4
+{
+    background: url("/images/menuFour.jpeg");
+}
+
+.item5
+{
+    background: url("/images/menuFive.jpeg");
+}
+
+.item6
+{
+    background: url("/images/menuSix.jpeg");
+}
+
+.item7
+{
+    background: url("/images/menuSeven.jpeg");
+}
+
+.item8
+{
+    background: url("/images/menuEight.jpeg");
+}
+
+.item9
+{
+    background: url("/images/menuNine.jpeg");
+}
+
+.item10
+{
+    background: url("/images/menuTen.jpeg");
+}
+
+.item11
+{
+    background: url("/images/menuEleven.jpeg");
+}
+
+.item12
+{
+    background: url("/images/menuTwelve.jpeg");
+}
+
+.item13
+{
+    background: url("/images/menuThirteen.jpeg");
+}
+
+.item14
+{
+    background: url("/images/menuFourteen.jpeg");
+}
+
+.item15
+{
+    background: url("/images/menuFifteen.jpeg");
+}
+
+.contactInfo
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#map {
+    height: 450px;
+    width: 750px;
+  }
+
+form
+{
+    background: rgba(0, 0, 0, .7);
+    width: 300px;
+    height: 450px;
+    border: 2px solid white;
+}
+
+label
+{
+    color: white;
+    font-family: 'Lexend Giga', sans-serif;
+    margin-left: 15px;
+}
+
+input
+{
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Lexend Giga', sans-serif;
+    background: rgba(0, 0, 0, .7);
+    border: 1px solid white;
+    margin-left: 15px;
+    width: 265px;
+    height: 30px;
+    padding: 0 10px;
+}
+
+textarea
+{
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Lexend Giga', sans-serif;
+    background: rgba(0, 0, 0, .7);
+    border: 1px solid white;
+    margin-left: 15px;
+    width: 265px;
+    height: 150px;
+}
+
+.phpForm .sub-btn
+{
+    width: 100px;
+    margin-left: 100px;
+    background: rgba(0, 0, 0, .7);
+    color:white;
+}
+
+.sub-btn:hover
+{
+    background: rgb(177,123,79);
+    color:black;;
+}
