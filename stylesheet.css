@@ -82,6 +82,11 @@ a{
     margin-top: 20px;
 }
 
+.fixer .navigationBar
+{
+    align-self: center;
+}
+
 h1, h2, h3,p, div a
 {
     font-family: 'Lexend Giga', sans-serif;
@@ -555,5 +560,508 @@ textarea
 .sub-btn:hover
 {
     background: rgb(177,123,79);
-    color:black;;
+    color:black;
+}
+
+.mobileMenu
+{
+    display: none;
+    height: 55px;
+    max-width: 100vw;
+    padding-right: 30px;
+    background-color: black;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mobileMenu i
+{
+    justify-self: flex-end;
+}
+
+.mobileMenu .mobileImage{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.mobileMenu img
+{
+    height: 45px;
+    width: 45px;
+}
+
+.mobileIcon
+{
+    color: white;
+    font-size: 30px;
+}
+
+.mobileIcon:hover
+{
+    cursor: pointer;
+}
+
+.toggleMenu
+{
+    display: none;
+    height: 100vh;
+    max-width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.toggleMenu .floatAbsolute
+{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.toggleMenu > *
+{
+    margin: 20px 20px;
+}
+
+.toggleMenu .floatUp{
+    justify-self: flex-start;
+}
+
+.toggleMenu div i{
+    color: white;
+    font-size: 30px;
+}
+
+.toggleMenu img{
+    height: 65px;
+    width: 65px;
+}
+
+.toggleMenu a:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(163, 108, 36);
+    text-decoration-thickness: 3px;
+}
+
+.floatAbsolute:hover
+{
+    cursor: pointer;
+}
+
+#interactiveAbout
+{
+    height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#slideShowContainer
+{
+    max-height: 100vh;
+    width: 400vw;
+    overflow: hidden;
+    background-color: pink;
+    position: absolute;
+}
+
+
+.radioRow
+{
+    position: absolute;
+    left: 30%;
+    bottom: 10px;
+}
+
+.lefty, .righty
+{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+}
+
+.lefty, .righty{
+    top: 48%;
+}
+
+.lefty{
+    left: 20px;
+}
+
+.righty{
+    right: 20px;
+}
+
+.righty:hover, .lefty:hover{
+    cursor: pointer;
+}
+
+.floater
+{
+    float: left;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="radio"] {
+    -ms-transform: scale(.5); 
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    margin-right: -215px;
+    z-index: 4000;
+}
+
+#slider1
+{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/images/slide3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#slider2
+{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/images/slide2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#slider3
+{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/images/slide1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#slider4
+{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/images/slide4.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.floater h1:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: rgb(163, 108, 36);
+    text-decoration-thickness: 7px;
+}
+
+.fixer
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+}
+
+#whatWeDo
+{
+    display: none;
+}
+
+#ourMission
+{
+    display: none;
+}
+
+#ourValues
+{
+    display: none;
+}
+
+#ourHistory
+{
+    display: none;
+}
+
+.innerFixer
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.innerFixerHistory
+{
+    position: relative;
+}
+
+.fixer > div
+{
+    position: relative;
+}
+
+.fixer *
+{
+    color: white;
+    text-align: center;
+}
+
+.fixer .fa-times{
+    font-size: 30px;
+}
+
+.closer
+{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    z-index: 100000;
+}
+
+.fixer .fa-times:hover
+{
+    cursor: pointer;
+}
+
+.quoteBoxRow
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.quoteBox
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.fixer h1
+{
+    font-size: 60px;
+    margin: 25px 0;
+}
+
+.quoteBoxRow p
+{
+    text-align: center;
+}
+
+.quoteBox p, .quoteBox h1, .quoteBox h2
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+.quoteBox .quoteLeft
+{
+position: absolute;
+top: -38px;
+left: 115px;
+height: 75px;
+width: 75px;
+border-radius: 50%;
+background: rgb(163, 108, 36);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.quoteBox .quoteRight
+{
+position: absolute;
+bottom: -38px;
+left: 115px;
+height: 75px;
+width: 75px;
+border-radius: 50%;
+background: rgb(163, 108, 36);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.fa-quote-left, .fa-quote-right
+{
+    font-size: 30px;
+}
+
+.q1
+{
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/square1.jpeg");
+}
+
+.q2
+{
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/square2.jpeg");
+}
+
+.q3
+{
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/square3.jpeg");
+}
+
+.ssBackground
+{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/images/ssBackground.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.middleBlock
+{
+    background: white;
+    width: 500px;
+    height: 175px;
+    align-self: center;
+    justify-self: center;
+    color: black;
+    margin-left: calc((100% - 500px)/2);
+    display: flex;
+    flex-direction: row;
+}
+
+.logoBlock
+{
+    width: 175px;
+    height: 100%;
+    background: rgb(209, 147, 65);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBlock
+{
+    width: 100%;
+}
+
+.logoBlock img
+{
+    width: 75%;
+}
+
+.middleBlock .textBlock p
+{
+    color: black;
+    text-align: left;
+    margin: 15px;
+}
+
+.innerFixer .navigationBar
+{
+    
+}
+
+.historyGrid
+{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.block1
+{
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("/images/block1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.block2
+{
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("/images/block2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.block3
+{
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("/images/block3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.block4
+{
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("/images/block4.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.overlay .navigationBar
+{
+    align-self: flex-start;
+}
+
+.overlay .middleBlock
+{
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+.block1, .block2, .block3, .block4
+{
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1080px)
+{
+    .mobileMenu
+    {
+        display: flex;
+    }
+
+    .navigationBar
+    {
+        display: none;
+    }
 }
