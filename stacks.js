@@ -33,36 +33,114 @@ function openMenu()
   }
 }
 
-function changeSlide(slideAmount)
+// function changeSlide(slideAmount)
+// {
+//   let changedSlide = document.getElementById("slideShowContainer");
+//   changedSlide.style.left = slideAmount;
+// }
+
+// function forward()
+// {
+//   let currentPosition = document.getElementById("slideShowContainer").style.left;
+//   console.log(currentPosition);
+//   let newPosition = "";
+//   if(currentPosition === "0vw")
+//   {
+//     document.getElementById("slideShowContainer").style.left = "-100vw";
+//     document.getElementById("slide2").checked = true;
+//   }
+//   else if(currentPosition === "-100vw")
+//   {
+//     document.getElementById("slideShowContainer").style.left = "-200vw";
+//     document.getElementById("slide3").checked=true;
+//   }
+//   else if(currentPosition === "-200vw")
+//   {
+//     document.getElementById("slideShowContainer").style.left = "-300vw";
+//     document.getElementById("slide4").checked = true;
+//   }
+//   else if(currentPosition === "-300vw")
+//   {
+//     document.getElementById("slideShowContainer").style.left = "0vw";
+//     document.getElementById("slide1").checked = true;
+//   }
+// }
+
+// function backward()
+// {
+//   let currentPosition = document.getElementById("slideShowContainer").style.left;
+//   console.log(currentPosition);
+//   if(currentPosition === "0vw")
+//   {
+//     document.getElementById("slideShowContainer").style.left = "-300vw";
+//     document.getElementById("slide4").checked = true;
+//   }
+//   else if(currentPosition === "-100vw")
+//   {
+//     document.getElementById("slideShowContainer").style.left = "0vw";
+//     document.getElementById("slide1").checked=true;
+//   }
+//   else if(currentPosition === "-200vw")
+//   {
+//     document.getElementById("slideShowContainer").style.left = "-100vw";
+//     document.getElementById("slide2").checked = true;
+//   }
+//   else if(currentPosition === "-300vw")
+//   {
+//     document.getElementById("slideShowContainer").style.left = "-200vw";
+//     document.getElementById("slide3").checked = true;
+//   }
+// }
+
+function findNumber(plusOrMinus)
 {
-  let changedSlide = document.getElementById("slideShowContainer");
-  changedSlide.style.left = slideAmount;
+  let currentSlide = document.getElementsByClassName('floater');
+  let counter = 0;
+  while(currentSlide[counter].style.display === 'none')
+  {
+    counter++;
+  }
+  if(plusOrMinus === 'plus')
+  {
+    if(counter === 3)
+    {
+      counter = 0;
+    }
+    else
+    {
+      counter++;
+    }
+  }
+  else
+  {
+    if(counter === 0)
+    {
+      counter = 3;
+    }
+    else
+    {
+      counter--;
+    }
+  }
+  changeSlide(counter);
+
 }
 
-function forward()
+function changeSlide(number)
 {
-  let currentPosition = document.getElementById("slideShowContainer").style.left;
-  console.log(currentPosition);
-  let newPosition = "";
-  if(currentPosition === "0vw")
+  document.getElementsByClassName('radioJump')[number].checked = true;
+  let newSlide = document.getElementsByClassName('floater')[number];
+  newSlide.style.display = "flex";
+  for(let counter = 0; counter < document.getElementsByClassName('floater').length; counter++)
   {
-    document.getElementById("slideShowContainer").style.left = "-100vw";
-    document.getElementById("slide2").checked = true;
-  }
-  else if(currentPosition === "-100vw")
-  {
-    document.getElementById("slideShowContainer").style.left = "-200vw";
-    document.getElementById("slide3").checked=true;
-  }
-  else if(currentPosition === "-200vw")
-  {
-    document.getElementById("slideShowContainer").style.left = "-300vw";
-    document.getElementById("slide4").checked = true;
-  }
-  else if(currentPosition === "-300vw")
-  {
-    document.getElementById("slideShowContainer").style.left = "0vw";
-    document.getElementById("slide1").checked = true;
+    if(counter === number)
+    {
+
+    }
+    else
+    {
+      document.getElementsByClassName('floater')[counter].style.display = "none";
+    }
   }
 }
 

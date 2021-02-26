@@ -17,7 +17,7 @@
     </style>
 
 </head>
-<body>
+<body onload="forward()">
     <div class="mobileMenu">
         <div class="mobileImage"><a href="index.html"><img src="/images/logo.png" alt=""></a></div>
         <div class="mobileIcon" onclick="openMenu()"><i class="fas fa-bars"></i></div>
@@ -52,13 +52,13 @@
                 <div class="floater" id="slider4"><h1 onclick="openSlide('ourValues')">Our Values</h1></div>
         </div>
         <div class="radioRow">
-            <input type="radio" name="radioSlides" id="slide1" onclick="changeSlide('0vw')" checked>
-            <input type="radio" name="radioSlides" id="slide2" onclick="changeSlide('-100vw')">
-            <input type="radio" name="radioSlides" id="slide3" onclick="changeSlide('-200vw')">
-            <input type="radio" name="radioSlides" id="slide4" onclick="changeSlide('-300vw')">    
+            <input type="radio" name="radioSlides" id="slide1" class="radioJump" onclick="changeSlide(0)" checked>
+            <input type="radio" name="radioSlides" id="slide2" class="radioJump" onclick="changeSlide(1)">
+            <input type="radio" name="radioSlides" id="slide3" class="radioJump" onclick="changeSlide(2)">
+            <input type="radio" name="radioSlides" id="slide4" class="radioJump" onclick="changeSlide(3)">    
         </div>
-        <i class="fas fa-arrow-circle-right righty" onclick="forward()"></i>
-        <i class="fas fa-arrow-circle-left lefty" onclick="forward()"></i>
+        <i class="fas fa-arrow-circle-right righty" onclick="findNumber('plus')"></i>
+        <i class="fas fa-arrow-circle-left lefty" onclick="findNumber('minus')"></i>
         
     </div>
 

@@ -727,7 +727,11 @@ input[type="radio"] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #slider2
@@ -736,7 +740,10 @@ input[type="radio"] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #slider3
@@ -745,7 +752,10 @@ input[type="radio"] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #slider4
@@ -754,7 +764,10 @@ input[type="radio"] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .floater h1:hover{
@@ -927,7 +940,6 @@ justify-content: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .middleBlock
@@ -997,7 +1009,6 @@ justify-content: center;
     align-items: center;
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/ssBackground.jpeg");
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
 }
 
