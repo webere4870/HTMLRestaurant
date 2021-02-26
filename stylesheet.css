@@ -769,7 +769,7 @@ input[type="radio"] {
     position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
 }
@@ -921,7 +921,7 @@ justify-content: center;
     background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/square3.jpeg");
 }
 
-.ssBackground
+.historyBackground
 {
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/images/ssBackground.jpeg");
     background-size: cover;
@@ -988,6 +988,68 @@ justify-content: center;
     grid-template-rows: 1fr 1fr;
 }
 
+.historyPage
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/ssBackground.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.historyBlock
+{
+    display: grid;
+    width: 600px;
+    height: auto;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 150px 450px;
+    grid-template-rows: repeat(4, 125px);
+    background: rgb(209, 147, 65);;
+}
+
+.dateBlock
+{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background: rgb(209, 147, 65);;
+    border: 6px solid white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+}
+
+.dateBlock p
+{
+    color: white;
+    font-size: 20px;
+}
+
+.sideOfDate
+{
+    background: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideOfDate p
+{
+    color:black;
+    font-size: 15px;
+}
+
 .block1
 {
     background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("/images/block1.jpeg");
@@ -1051,6 +1113,123 @@ justify-content: center;
 {
     width: 100%;
     height: 100%;
+}
+
+/* .valuesPage
+{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 500px;
+    overflow-y: inherit;
+} */
+
+.valuesPage
+{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.absoluter{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.circleNum
+{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 8px solid rgb(241, 170, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleNum h1
+{
+    color: rgb(241, 170, 77);
+    text-shadow: none;
+    font-size: 100px;
+}
+
+.valuesPage .closer
+{
+    z-index: 10000;
+}
+
+.valueText
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.numberBox
+{
+    background: rgb(241, 170, 77);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.valueDisplay
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+   margin: 60px 0;
+}
+
+
+.value1
+{
+    width: 100vw;
+}
+
+.value2
+{
+
+    width: 100vw;
+}
+
+
+.num1
+{
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("/images/block1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nonNumber
+{
+    background:rgba(0, 0, 0, .0);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nonNumber p, .nonNumber h1{
+    color: rgb(241, 170, 77);
+    text-shadow: none;
+    font-family: 'Lexend Giga', sans-serif;
+    margin: 20px;
 }
 
 @media only screen and (max-width: 1080px)
