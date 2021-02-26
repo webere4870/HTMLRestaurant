@@ -1232,7 +1232,7 @@ justify-content: center;
     margin: 20px;
 }
 
-@media only screen and (max-width: 1080px)
+/* @media only screen and (max-width: 1080px)
 {
     .mobileMenu
     {
@@ -1243,4 +1243,4 @@ justify-content: center;
     {
         display: none;
     }
-}
+} */

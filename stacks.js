@@ -15,6 +15,10 @@ function closeMenu()
   closer.style.cssText = "display: none;";
   let opener = document.querySelector(".mobileMenu");
   opener.style.cssText = "display: flex";
+  let scrollControl = document.querySelector('body')
+  {
+    scrollControl.style.overflow = 'auto';
+  }
 }
 
 function openMenu()
@@ -23,6 +27,10 @@ function openMenu()
   closer.style.cssText = "display: none;";
   let opener = document.querySelector(".toggleMenu");
   opener.style.cssText = "display: flex";
+  let scrollControl = document.querySelector('body')
+  {
+    scrollControl.style.overflow = 'hidden';
+  }
 }
 
 function changeSlide(slideAmount)
@@ -71,3 +79,33 @@ function openSlide(slideToDisplay)
   document.querySelector("body").style.overflowY = "hidden";
   opener.style.cssText = "display: inherit; overflow-y: scroll";
 }
+
+function checkViewport()
+{
+  if(document.querySelectorAll('.toggleMenu')[0].style.display === 'flex')
+  {
+
+  }
+  else
+  {
+    let myPixels = window.innerWidth;
+  console.log(myPixels);
+  if(myPixels < 1080)
+  {
+    let myCounter = document.querySelectorAll(".navigationBar").length;
+    let myMobile = document.getElementsByClassName('navigationBar');
+    for(let index = 0; index < myCounter; index++)
+    {
+      document.querySelectorAll(".navigationBar")[index].style.display = 'none';
+      document.querySelectorAll(".mobileMenu")[index].style.display = 'flex';
+    }
+  }
+  else
+  {
+    document.querySelectorAll(".navigationBar")[0].style.display = 'flex';
+    document.querySelectorAll(".mobileMenu")[0].style.display = 'none';
+  }
+  }
+}
+
+setInterval(checkViewport, 200);
