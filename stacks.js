@@ -172,10 +172,12 @@ function checkViewport()
   {
     let myCounter = document.querySelectorAll(".navigationBar").length;
     let myMobile = document.getElementsByClassName('navigationBar');
+    
     for(let index = 0; index < myCounter; index++)
     {
       document.querySelectorAll(".navigationBar")[index].style.display = 'none';
       document.querySelectorAll(".mobileMenu")[index].style.display = 'flex';
+      document.querySelectorAll('.fa-chevron-circle-down')[index].style.display = 'none';
     }
   }
   else

@@ -628,6 +628,7 @@ textarea
 
 .toggleMenu .floatUp{
     justify-self: flex-start;
+    margin-top: 0;
 }
 
 .toggleMenu div i{
@@ -667,15 +668,23 @@ textarea
     width: 400vw;
     overflow: hidden;
     background-color: pink;
-    position: absolute;
+    position: relative;
 }
 
 
-.radioRow
+
+
+.radioRowWrapper
 {
     position: absolute;
-    left: 30%;
-    bottom: 10px;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .lefty, .righty
@@ -717,7 +726,7 @@ input[type="radio"] {
     -ms-transform: scale(.5); 
     -webkit-transform: scale(.5);
     transform: scale(.5);
-    margin-right: -215px;
+    margin: 0 -100px;
     z-index: 4000;
 }
 
@@ -776,6 +785,7 @@ input[type="radio"] {
     text-decoration-color: rgb(163, 108, 36);
     text-decoration-thickness: 7px;
 }
+
 
 .fixer
 {
@@ -1243,15 +1253,36 @@ justify-content: center;
     margin: 20px;
 }
 
-/* @media only screen and (max-width: 1080px)
+@media only screen and (max-width: 768px)
 {
-    .mobileMenu
-    {
-        display: flex;
-    }
-
-    .navigationBar
-    {
+    .footer .fab, .footer img, .footer p{
         display: none;
     }
-} */
+
+    .footer{
+        justify-content: center;
+    }
+    .footer > *{
+        margin: 0 10px;
+    }
+    body{
+
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .floater h1{
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 560px)
+{
+    body{
+        background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/images/mobileBackground.jpeg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+}

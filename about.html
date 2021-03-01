@@ -17,7 +17,7 @@
     </style>
 
 </head>
-<body onload="forward()">
+<body> 
     <div class="mobileMenu">
         <div class="mobileImage"><a href="index.html"><img src="/images/logo.png" alt=""></a></div>
         <div class="mobileIcon" onclick="openMenu()"><i class="fas fa-bars"></i></div>
@@ -46,19 +46,23 @@
 
     <div id="interactiveAbout">
         <div id="slideShowContainer">    
-                <div class="floater" id="slider1"><h1 onclick="openSlide('ourHistory')">Our History</h1></div>
-                <div class="floater" id="slider2"><h1 onclick="openSlide('whatWeDo')">What We Do</h1></div>
-                <div class="floater" id="slider3"><h1 onclick="openSlide('ourMission')">Our Mission</h1></div>
-                <div class="floater" id="slider4"><h1 onclick="openSlide('ourValues')">Our Values</h1></div>
+                <div class="floater" id="slider1"><h1 onclick="openSlide('ourHistory')">History</h1><br>
+                </div>
+                <div class="floater" id="slider2"><h1 onclick="openSlide('whatWeDo')">The What</h1></div>
+                <div class="floater" id="slider3"><h1 onclick="openSlide('ourMission')">Mission</h1></div>
+                <div class="floater" id="slider4"><h1 onclick="openSlide('ourValues')">Values</h1></div>
+                <div class="radioRowWrapper">
+                    <div class="radioRow">
+                        <input type="radio" name="radioSlides" id="slide1" class="radioJump" onclick="changeSlide(0)" checked>
+                        <input type="radio" name="radioSlides" id="slide2" class="radioJump" onclick="changeSlide(1)">
+                        <input type="radio" name="radioSlides" id="slide3" class="radioJump" onclick="changeSlide(2)">
+                        <input type="radio" name="radioSlides" id="slide4" class="radioJump" onclick="changeSlide(3)">    
+                    </div>
+                </div>
         </div>
-        <div class="radioRow">
-            <input type="radio" name="radioSlides" id="slide1" class="radioJump" onclick="changeSlide(0)" checked>
-            <input type="radio" name="radioSlides" id="slide2" class="radioJump" onclick="changeSlide(1)">
-            <input type="radio" name="radioSlides" id="slide3" class="radioJump" onclick="changeSlide(2)">
-            <input type="radio" name="radioSlides" id="slide4" class="radioJump" onclick="changeSlide(3)">    
-        </div>
+        
         <i class="fas fa-arrow-circle-right righty" onclick="findNumber('plus')"></i>
-        <i class="fas fa-arrow-circle-left lefty" onclick="findNumber('minus')"></i>
+        <i class="fas fa-arrow-circle-left lefty" onclick="findNumber('minus ')"></i>
         
     </div>
 
